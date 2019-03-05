@@ -7,10 +7,6 @@ import ChatRoom from "./containers/ChatRoom";
 class App extends Component {
   render() {
     return (
-      // <Switch>
-      //   <Route path="/chatroom" component={ChatRoom} />
-      //   <Route path="/" component={Home} />
-      // </Switch>
       <div>
         <Home />
       </div>

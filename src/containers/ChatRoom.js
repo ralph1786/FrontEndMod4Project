@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NewsContainer from "./NewsContainer";
 import InputBox from "../components/InputBox";
-import MessageContainer from "./MessageContainer";
+import MessagesContainer from "./MessagesContainer";
 import ScoreContainer from "./ScoreContainer";
 import "./ChatRoom.css";
 
@@ -16,7 +16,7 @@ class ChatRoom extends Component {
           <ScoreContainer />
         </div>
         <div className="messageContainer">
-          <MessageContainer />
+          <MessagesContainer />
         </div>
         <div className="inputBox">
           <InputBox />
