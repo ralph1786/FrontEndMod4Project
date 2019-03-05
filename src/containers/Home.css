@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Merienda");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+  overflow-x: hidden;
+  font-family: "Merienda", cursive;
+}
+
+.v-header {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  color: white;
+}
+
+.container {
+  /* max-width: 960px; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+}
+
+.logo-container {
+  grid-column: 2/6;
+  height: 300px;
+  z-index: 2;
+}
+
+.logo-container img {
+  grid-column: 2/6;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 45%;
+}
+
+.fullscreen-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-video-wrap video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.header-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #225470;
+  z-index: 1;
+  opacity: 0.75;
+}
+
+.header-content {
+  z-index: 2;
+  grid-column: 3/5;
+  grid-row: 4/6;
+  justify-self: center;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.top-navbar {
+  z-index: 3;
+  text-align: right;
+  margin-right: 20px;
+  padding-bottom: 50px;
+  grid-column: 5/7;
+}
+
+.v-header span {
+  grid-column: 1/2;
+  z-index: 3;
+  margin-top: 22px;
+  justify-self: center;
+  font-size: 1.35rem;
+  height: 5vh;
+}
+
+.v-header span:hover {
+  color: rgb(216, 214, 214);
+  cursor: pointer;
+}
+
+.btn {
+  width: 200px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.btn:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}

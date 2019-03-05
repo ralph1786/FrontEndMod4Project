@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.chatRoom-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  background-color: lightgray;
+}
+
+.scores {
+  background-color: lightgreen;
+  border: 1px solid black;
+  grid-column: 8/11;
+  grid-row: 2/7;
+  overflow: scroll;
+}
+
+.news {
+  background-color: aqua;
+  border: 1px solid black;
+  grid-column: 8/11;
+  grid-row: 7/12;
+  overflow: scroll;
+}
+
+.messageContainer {
+  background-color: lightcoral;
+  border: 1px solid black;
+  grid-column: 3/8;
+  grid-row: 2/10;
+}
+
+.inputBox {
+  background-color: lightpink;
+  border: 1px solid black;
+  grid-column: 3/8;
+  grid-row: 10/12;
+}
