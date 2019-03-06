@@ -17,8 +17,8 @@ class Home extends Component {
   render() {
     return (
 
-
       <>
+      <NavBar />
       {/*
       // <NavBar />
       // <TeamsContainer />
