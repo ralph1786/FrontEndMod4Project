@@ -36,10 +36,13 @@ class MessagesContainer extends Component {
         team_id: this.props.activeTeam.id,
         user_id: 1
       })
-    });
-    this.setState({
-      text: ""
-    });
+    })
+      .then(res => res.json())
+      .then(
+        this.setState({
+          text: ""
+        })
+      );
 
     // axios.post("http://localhost:3000/" + 'messages', obj)
     // .then(res => console.log(res.data))
@@ -52,15 +55,13 @@ class MessagesContainer extends Component {
     ));
     return (
       <div>
-        <h3>
-          {messages}
-          <NewMessageForm
-            activeTeam={this.props.activeTeam}
-            onChangeHandler={this.onChangeHandler}
-            onSubmitHandler={this.onSubmitHandler}
-            value={this.state.text}
-          />
-        </h3>
+        <h3>{messages}</h3>
+        <NewMessageForm
+          activeTeam={this.props.activeTeam}
+          onChangeHandler={this.onChangeHandler}
+          onSubmitHandler={this.onSubmitHandler}
+          value={this.state.text}
+        />
       </div>
     );
   }

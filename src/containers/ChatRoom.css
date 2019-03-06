@@ -11,26 +11,60 @@
 }
 
 .scores {
-  background-color: lightgreen;
+  background: #2bc0e4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #eaecc6,
+    #2bc0e4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #eaecc6,
+    #2bc0e4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border: 1px solid black;
-  grid-column: 8/11;
-  grid-row: 2/7;
+  grid-column: 8/13;
+  grid-row: 1/7;
   overflow: scroll;
 }
 
 .news {
-  background-color: aqua;
+  background: #ff6e7f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #bfe9ff,
+    #ff6e7f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #bfe9ff,
+    #ff6e7f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border: 1px solid black;
-  grid-column: 8/11;
-  grid-row: 7/12;
+  grid-column: 8/13;
+  grid-row: 7/13;
   overflow: scroll;
 }
 
 .messageContainer {
-  background-color: lightcoral;
+  position: relative;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border: 1px solid black;
-  grid-column: 3/8;
-  grid-row: 2/10;
+  grid-column: 1/8;
+  grid-row: 1/13;
 }
 
 .inputBox {

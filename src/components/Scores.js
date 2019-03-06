@@ -1,8 +1,8 @@
 import React from "react";
 
 const styles = {
-  width: "80px",
-  height: "65px",
+  width: "120px",
+  height: "95px",
   margin: "5px",
   display: "inline-block",
   WebkitBoxShadow: "10px 10px 5px -5px rgba(181,174,181,1)",
@@ -12,11 +12,13 @@ const styles = {
 };
 
 const spanStyles = {
-  marginLeft: "8px"
+  marginLeft: "11px",
+  fontSize: "1.3rem"
 };
 
 const pTagStyles = {
-  margin: "5px"
+  margin: "5px",
+  fontSize: "1.3rem"
 };
 
 const Scores = props => {

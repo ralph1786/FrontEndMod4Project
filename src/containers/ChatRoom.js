@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NewsContainer from "./NewsContainer";
-import InputBox from "../components/InputBox";
+// import InputBox from "../components/InputBox";
 import MessagesContainer from "./MessagesContainer";
 import ScoreContainer from "./ScoreContainer";
 import { API_ROOT } from "../constants";
@@ -13,14 +13,17 @@ class ChatRoom extends Component {
   };
 
   componentDidMount() {
+    console.log("mounted");
+
     fetch(API_ROOT + "/" + this.props.id)
       .then(res => res.json())
-      .then(
-        data =>
-          this.setState({
+      .then(data =>
+        this.setState(
+          {
             team: data
-          }),
-        () => console.log(this.state.team)
+          },
+          () => console.log("team:", this.state.team)
+        )
       );
   }
 
@@ -49,7 +52,7 @@ class ChatRoom extends Component {
                   team={this.state.team}
                   handleReceivedMessage={this.handleReceivedMessage}
                 />
-                <h2>Active team: {this.state.team.name}</h2>
+                <h2 style={styles}>Team: {this.state.team.name}</h2>
                 <MessagesContainer activeTeam={this.state.team} />
               </>
             ) : (
@@ -57,12 +60,16 @@ class ChatRoom extends Component {
             )}
           </div>
         </div>
-        <div className="inputBox">
+        {/* <div className="inputBox">
           <InputBox />
-        </div>
+        </div> */}
       </div>
     );
   }
 }
+
+const styles = {
+  textAlign: "center"
+};
 
 export default ChatRoom;

@@ -9,7 +9,8 @@ const styles = {
   MozBoxShadow: "10px 10px 5px -5px rgba(181,174,181,1)",
   boxShadow: "10px 10px 5px -5px rgba(181,174,181,1)",
   margin: "10px",
-  backgroundColor: "#faf8f5"
+  backgroundColor: "#faf8f5",
+  padding: "7px"
 };
 
 const linkStyles = {

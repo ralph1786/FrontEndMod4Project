@@ -28,7 +28,7 @@ class NewsContainer extends Component {
 
     return (
       <div>
-        <span style={styles}>Headlines</span>
+        <h2 style={styles}>Headlines</h2>
         {articles}
       </div>
     );

@@ -3,7 +3,7 @@ import Scores from "../components/Scores";
 import axios from "axios";
 
 const URL =
-  "https://cors-anywhere.herokuapp.com/http://data.nba.net/10s//prod/v1/20190304/scoreboard.json";
+  "https://cors-anywhere.herokuapp.com/http://data.nba.net/10s//prod/v1/20190306/scoreboard.json";
 
 class ScoreContainer extends Component {
   state = {
@@ -26,11 +26,15 @@ class ScoreContainer extends Component {
 
     return (
       <div>
-        <p>Scores</p>
+        <h2 style={styles}>Scores</h2>
         {gameScores}
       </div>
     );
   }
 }
+
+const styles = {
+  textAlign: "center"
+};
 
 export default ScoreContainer;
