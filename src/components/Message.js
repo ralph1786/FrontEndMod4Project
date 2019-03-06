@@ -12,6 +12,8 @@ const Message = (props) => {
         id {props.info.user_id}:
         {props.info.text}
       </p>
+      {/* <button onClick={() => props.deleteHandler(props.info)}>Delete Message</button> */}
+      <button onClick={() => props.editHandler(props.info)}>Edit Message</button>
       <span className="time-right">11:00</span>
     </div>
   );

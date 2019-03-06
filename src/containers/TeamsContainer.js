@@ -15,7 +15,7 @@ export default class TeamsContainer extends React.Component {
   componentDidMount(){
     fetch(API_ROOT)
     .then(res => res.json())
-    .then(teams => this.setState({ teams }))
+    .then(teams => this.setState({ teams }, ()=> console.log("TEams:", this.state.teams)))
   }
 
   clickTeam = (team) => {

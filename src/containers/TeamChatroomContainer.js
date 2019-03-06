@@ -14,7 +14,7 @@ export default class TeamChatroomContainer extends React.Component {
     .then(res => res.json())
     .then(data => this.setState({
       team: data
-    }), ()=> console.log(this.state.team))
+    }, ()=> console.log("this teams state:", this.state.team)))
   }
 
   handleReceivedMessage = response => {

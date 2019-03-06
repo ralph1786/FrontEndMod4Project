@@ -49,8 +49,27 @@ class MessagesContainer extends Component {
 
   }
 
+  deleteHandler = (msg) => {
+    fetch(`http://localhost:3000/messages/${msg.id}`, {
+      method: "DELETE",
+      headers: HEADERS,
+    })
+    .then(console.log)
+  }
+
+  editHandler = (msg) => {
+    console.log(msg);
+  }
+
   render() {
-    const messages = this.props.activeTeam.messages.map(message => <Message info={message} key={message.id} />)
+    const messages = this.props.activeTeam.messages.map(message =>
+      <Message
+      deleteHandler={this.deleteHandler}
+      editHandler={this.editHandler}
+      info={message}
+      key={message.id}
+      />
+    )
     return (
       <div>
         <h3>
