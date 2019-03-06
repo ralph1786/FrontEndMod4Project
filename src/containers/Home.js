@@ -1,14 +1,27 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import "./Home.css";
 import NavBar from "../components/NavBar";
 import video from "../Assets/Video/basketball.mp4";
 import TeamLogo from "../components/TeamLogo";
+import ChatRoom from "./ChatRoom";
+import TeamsContainer from "./TeamsContainer";
 
 class Home extends Component {
   render() {
     return (
       <Fragment>
+        <Switch>
+          <Route
+            path="/chatroom/:id"
+            render={routerProps => {
+              let id = routerProps.match.params.id;
+              return <ChatRoom id={id} />;
+            }}
+          />
+          {/* <Route path="/" component={TeamsContainer} /> */}
+        </Switch>
+
         <header className="v-header container">
           <div className="fullscreen-video-wrap">
             <video autoPlay>
@@ -24,7 +37,9 @@ class Home extends Component {
             <NavBar />
           </div>
           <div className="logo-container">
-            <TeamLogo />
+            {/* this will be teams container */}
+            {/* <TeamLogo /> */}
+            <TeamsContainer />
           </div>
           <div className="header-content">
             <p>Welcome NBA fans! </p>
