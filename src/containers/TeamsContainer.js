@@ -9,7 +9,8 @@ import video from "../Assets/Video/basketball.mp4";
 export default class TeamsContainer extends React.Component {
   state = {
     teams: [],
-    activeTeam: ""
+    activeTeam: "",
+    user: null
   };
 
   componentDidMount() {
@@ -34,6 +35,12 @@ export default class TeamsContainer extends React.Component {
     team.messages = [...team.messages, message];
     this.setState({ teams }, () => console.log("new teams", this.state.teams));
   };
+
+  submitUser = (user) => {
+    this.setState({
+      user
+    }, ()=> console.log("state user:", this.state.user))
+  }
 
   render() {
     const teamLogos = this.state.teams.map(team => (
@@ -61,7 +68,7 @@ export default class TeamsContainer extends React.Component {
           </span>
 
           <div className="top-navbar">
-            <NavBar />
+            <NavBar submitUser={this.submitUser} />
           </div>
           <div className="logo-container">
             {teamLogos}

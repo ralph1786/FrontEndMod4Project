@@ -17,7 +17,8 @@ const customStyles = {
 
 class NavBar extends Component {
   state = {
-    isModalOpen: false
+    isModalOpen: false,
+    user: ""
   };
 
   toggleModal = () => {
@@ -26,11 +27,29 @@ class NavBar extends Component {
     });
   };
 
+  submitUser = (event) => {
+    event.preventDefault();
+    this.props.submitUser(this.state.user);
+    this.setState({
+      user: ""
+    })
+  }
+
   render() {
     return (
       <div>
         <nav className="navbar">
           <ul>
+            <li>
+              <form onSubmit={event => this.submitUser(event)}>
+                <input
+                onChange={event => this.setState({ user: event.target.value }, ()=> console.log(this.state.user))}
+                value={this.state.user}
+                type="text"
+                placeholder="name"/>
+                <button type="submit">Go</button>
+              </form>
+            </li>
             <li onClick={this.toggleModal}>SignUp</li>
             <li onClick={this.toggleModal}>LogIn</li>
           </ul>
