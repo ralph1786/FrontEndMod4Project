@@ -1,6 +1,7 @@
 import React from 'react';
 import { API_ROOT } from '../constants';
 import Cable from './Cable';
+import { Link } from 'react-router-dom';
 
 import TeamChatroomContainer from "./TeamChatroomContainer";
 
@@ -35,17 +36,24 @@ export default class TeamsContainer extends React.Component {
 
   render(){
 
-    const teamNames = this.state.teams.map(team => <li key={team.id} onClick={() => this.clickTeam(team)}>{team.name}</li>);
+    const teamNames = this.state.teams.map(team =>
+      <Link to={`/chatroom/${team.id}`}><li key={team.id} onClick={() => this.clickTeam(team)}>{team.name}</li></Link>
+    );
 
     return(
       <div>
         <h1>Hello from TeamsContainer!</h1>
         <ul>{teamNames}</ul>
+
+        {/*
         <Cable
             teams={this.state.teams}
             handleReceivedMessage={this.handleReceivedMessage}
           />
-        <TeamChatroomContainer activeTeam={this.state.activeTeam}/>
+
+          <TeamChatroomContainer activeTeam={this.state.activeTeam}/>
+          */}
+
       </div>
     )
   }

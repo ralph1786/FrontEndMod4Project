@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import video from "../Assets/Video/basketball.mp4";
 import TeamLogo from "../components/TeamLogo";
 import TeamsContainer from "./TeamsContainer";
+import TeamChatroomContainer from "./TeamChatroomContainer";
 import { Route, Switch } from "react-router-dom";
 
 class Home extends Component {
@@ -18,9 +19,17 @@ class Home extends Component {
 
 
       <>
-      <NavBar />
-      <TeamsContainer />
-
+      {/*
+      // <NavBar />
+      // <TeamsContainer />
+      */}
+      <Switch>
+        <Route path="/chatroom/:id" render={routerProps => {
+          let id = routerProps.match.params.id;
+          return <TeamChatroomContainer id={id} />
+        }} />
+        <Route path="/" component={TeamsContainer} />
+      </Switch>
 
       {/*
       <Fragment>
