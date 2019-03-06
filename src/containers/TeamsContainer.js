@@ -3,6 +3,8 @@ import { API_ROOT } from "../constants";
 import Cable from "./Cable";
 import { Link } from "react-router-dom";
 import TeamLogo from "../components/TeamLogo";
+import NavBar from "../components/NavBar";
+import video from "../Assets/Video/basketball.mp4";
 
 export default class TeamsContainer extends React.Component {
   state = {
@@ -34,26 +36,45 @@ export default class TeamsContainer extends React.Component {
   };
 
   render() {
-    const teamNames = this.state.teams.map(team => (
+    const teamLogos = this.state.teams.map(team => (
       <Link to={`/chatroom/${team.id}`}>
-        <li key={team.id} onClick={() => this.clickTeam(team)}>
-          {team.name}
-        </li>
+        <img key={team.id} src={team.logo} onClick={() => this.clickTeam(team)} />
       </Link>
     ));
 
     return (
       <div>
-        <h1>Hello from TeamsContainer!</h1>
-        <ul>{teamNames}</ul>
+
 
         {/*
-        <Cable
-            teams={this.state.teams}
-            handleReceivedMessage={this.handleReceivedMessage}
-          />
-          <TeamChatroomContainer activeTeam={this.state.activeTeam}/>
-          */}
+          <ul>{teamLogos}</ul>
+        */}
+        <header className="v-header container">
+          <div className="fullscreen-video-wrap">
+            <video autoPlay>
+              <source src={video} type="video/mp4" />
+            </video>
+          </div>
+          <div className="header-overlay" />
+          <span>
+            <i className="fas fa-basketball-ball" /> FanChat
+          </span>
+
+          <div className="top-navbar">
+            <NavBar />
+          </div>
+          <div className="logo-container">
+            {teamLogos}
+          </div>
+          <div className="header-content">
+            <p>Welcome NBA fans! </p>
+            <Link to={""}>
+              <button className="btn">Start Chat</button>
+            </Link>
+          </div>
+        </header>
+
+
       </div>
     );
   }
