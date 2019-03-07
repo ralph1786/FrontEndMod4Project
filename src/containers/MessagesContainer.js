@@ -19,7 +19,6 @@ class MessagesContainer extends Component {
 
   onSubmitHandler = event => {
     event.preventDefault();
-
     const obj = {
       text: this.state.text,
       team_id: this.props.activeTeam.id,
@@ -56,6 +55,9 @@ class MessagesContainer extends Component {
     return (
       <div>
         <h3>{messages}</h3>
+        <br />
+        <br />
+        <br />
         <NewMessageForm
           activeTeam={this.props.activeTeam}
           onChangeHandler={this.onChangeHandler}

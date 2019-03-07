@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import TeamLogo from "../components/TeamLogo";
 import NavBar from "../components/NavBar";
 import video from "../Assets/Video/basketball.mp4";
+// import video from "../Assets/Video/highlight.mov";
 
 export default class TeamsContainer extends React.Component {
   state = {
@@ -54,22 +55,21 @@ export default class TeamsContainer extends React.Component {
         */}
         <header className="v-header container">
           <div className="fullscreen-video-wrap">
-            <video autoPlay>
-              <source src={video} type="video/mp4" />
+            <video autoPlay loop>
+              <source src={video} type="video/webm" />
             </video>
           </div>
           <div className="header-overlay" />
           <span>
             <i className="fas fa-basketball-ball" /> FanChat
           </span>
-
           <div className="top-navbar">
             <NavBar />
           </div>
           <div className="logo-container">{teamLogos}</div>
           <div className="header-content">
-            <p>Welcome NBA fans! </p>
-            <Link to={""}>
+            <p> Welcome NBA fans! </p>
+            <Link to={`/chatroom/${Math.floor(Math.random() * 30) + 1}`}>
               <button className="btn">Start Chat</button>
             </Link>
           </div>
