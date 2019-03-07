@@ -1,9 +1,9 @@
 import React from "react";
 
 const stylesTextArea = {
-  position: "absolute",
+  position: "fixed",
   bottom: "20px",
-  width: "85%",
+  width: "48%",
   height: "7%",
   fontSize: "1.4em",
   borderRadius: "25px",
@@ -13,16 +13,17 @@ const stylesTextArea = {
 };
 
 const stylesButton = {
-  position: "absolute",
-  right: "0",
+  position: "fixed",
+  right: "42.5%",
   bottom: "20px",
-  width: "10%",
+  width: "7%",
   height: "7%",
   fontSize: "1.4em",
   backgroundColor: "#007AFF",
   color: "white",
   borderRadius: "50px",
-  marginRight: "23px"
+  marginRight: "23px",
+  outline: "none"
 };
 
 const NewMessageForm = props => {

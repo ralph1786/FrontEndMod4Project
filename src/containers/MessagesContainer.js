@@ -52,7 +52,7 @@ class MessagesContainer extends Component {
     ));
     return (
       <div>
-        <h3>{messages}</h3>
+        <h3>{messages}</h3><br/><br/><br/>
         <NewMessageForm
           activeTeam={this.props.activeTeam}
           onChangeHandler={this.onChangeHandler}
