@@ -40,18 +40,23 @@ class NavBar extends Component {
       <div>
         <nav className="navbar">
           <ul>
-            <li>
-              <form onSubmit={event => this.submitUser(event)}>
+
+            {Object.keys(this.props.theUser).length > 0 ? <><li>Welcome, {this.props.theUser.username}</li>
+            <li onClick={this.props.logOut}>Log Out</li></>
+              :
+              <><li><form onSubmit={event => this.submitUser(event)}>
                 <input
                 onChange={event => this.setState({ user: event.target.value }, ()=> console.log(this.state.user))}
                 value={this.state.user}
                 type="text"
                 placeholder="name"/>
                 <button type="submit">Go</button>
-              </form>
-            </li>
+                </form></li>
+              <li onClick={this.toggleModal}>LogIn</li></>}
+
+            {/*
             <li onClick={this.toggleModal}>SignUp</li>
-            <li onClick={this.toggleModal}>LogIn</li>
+            */}
           </ul>
         </nav>
         <Modal

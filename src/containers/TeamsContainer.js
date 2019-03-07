@@ -1,5 +1,5 @@
 import React from "react";
-import { API_ROOT } from "../constants";
+import { API_ROOT, HEADERS } from "../constants";
 // import Cable from "./Cable";
 import { Link } from "react-router-dom";
 // import TeamLogo from "../components/TeamLogo";
@@ -10,7 +10,7 @@ export default class TeamsContainer extends React.Component {
   state = {
     teams: [],
     activeTeam: "",
-    user: null
+    theUser: {}
   };
 
   componentDidMount() {
@@ -37,14 +37,30 @@ export default class TeamsContainer extends React.Component {
   };
 
   submitUser = (user) => {
+    console.log("USER: ", user)
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: HEADERS,
+      body: JSON.stringify({
+        username: user
+      })
+    })
+    .then(res => res.json())
+    .then(theUser => this.setState({
+      theUser
+    }, ()=> console.log("state user:", this.state.theUser)))
+
+  }
+
+  logOut = () => {
     this.setState({
-      user
-    }, ()=> console.log("state user:", this.state.user))
+      theUser: {}
+    })
   }
 
   render() {
     const teamLogos = this.state.teams.map(team => (
-      <Link to={`/chatroom/${team.id}`}>
+      <Link key={team.id} to={`/chatroom/${team.id}`}>
         <img
           alt="nba-team-logo"
           key={team.id}
@@ -71,7 +87,7 @@ export default class TeamsContainer extends React.Component {
           </span>
 
           <div className="top-navbar">
-            <NavBar submitUser={this.submitUser} />
+            <NavBar submitUser={this.submitUser} theUser={this.state.theUser} logOut={this.logOut}/>
           </div>
           <div className="logo-container">{teamLogos}</div>
           <div className="header-content">
