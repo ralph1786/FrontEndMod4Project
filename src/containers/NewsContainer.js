@@ -36,7 +36,10 @@ class NewsContainer extends Component {
 }
 
 const styles = {
-  textAlign: "center"
+  textAlign: "center",
+  color: "white",
+  fontFamily: "Impact",
+  fontSize: "2.3em"
 };
 
 export default NewsContainer;
