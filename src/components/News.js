@@ -10,7 +10,8 @@ const styles = {
   boxShadow: "10px 10px 5px -5px rgba(181,174,181,1)",
   margin: "10px",
   backgroundColor: "#faf8f5",
-  padding: "7px"
+  padding: "7px",
+  borderRadius: "10px"
 };
 
 const linkStyles = {

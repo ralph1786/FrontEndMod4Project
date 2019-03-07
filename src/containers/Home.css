@@ -40,6 +40,12 @@ body {
   height: 80px;
   margin: 10px;
   border-radius: 45%;
+  opacity: 0.5;
+}
+
+.logo-container img:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fullscreen-video-wrap {

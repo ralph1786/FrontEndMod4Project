@@ -1,8 +1,8 @@
 import React from "react";
 import { API_ROOT } from "../constants";
-import Cable from "./Cable";
+// import Cable from "./Cable";
 import { Link } from "react-router-dom";
-import TeamLogo from "../components/TeamLogo";
+// import TeamLogo from "../components/TeamLogo";
 import NavBar from "../components/NavBar";
 import video from "../Assets/Video/basketball.mp4";
 
@@ -45,14 +45,17 @@ export default class TeamsContainer extends React.Component {
   render() {
     const teamLogos = this.state.teams.map(team => (
       <Link to={`/chatroom/${team.id}`}>
-        <img key={team.id} src={team.logo} onClick={() => this.clickTeam(team)} />
+        <img
+          alt="nba-team-logo"
+          key={team.id}
+          src={team.logo}
+          onClick={() => this.clickTeam(team)}
+        />
       </Link>
     ));
 
     return (
       <div>
-
-
         {/*
           <ul>{teamLogos}</ul>
         */}
@@ -70,9 +73,7 @@ export default class TeamsContainer extends React.Component {
           <div className="top-navbar">
             <NavBar submitUser={this.submitUser} />
           </div>
-          <div className="logo-container">
-            {teamLogos}
-          </div>
+          <div className="logo-container">{teamLogos}</div>
           <div className="header-content">
             <p>Welcome NBA fans! </p>
             <Link to={""}>
@@ -80,8 +81,6 @@ export default class TeamsContainer extends React.Component {
             </Link>
           </div>
         </header>
-
-
       </div>
     );
   }
