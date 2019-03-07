@@ -15,32 +15,45 @@ class NavBar extends Component {
     });
   };
 
-  submitUser = (event) => {
+  submitUser = event => {
     event.preventDefault();
     this.props.submitUser(this.state.user);
     this.setState({
       user: ""
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <div>
         <nav className="navbar">
           <ul>
-
-            {Object.keys(this.props.theUser).length > 0 ? <><li>Welcome, {this.props.theUser.username}</li>
-            <li onClick={this.props.logOut}>Log Out</li></>
-              :
-              <><li><form onSubmit={event => this.submitUser(event)}>
-                <input
-                onChange={event => this.setState({ user: event.target.value }, ()=> console.log(this.state.user))}
-                value={this.state.user}
-                type="text"
-                placeholder="name"/>
-                <button type="submit">Go</button>
-                </form></li>
-              <li>LogIn</li></>}
+            {Object.keys(this.props.theUser).length > 0 ? (
+              <>
+                <li>Welcome, {this.props.theUser.username}</li>
+                <li onClick={this.props.logOut}>Log Out</li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <form onSubmit={event => this.submitUser(event)}>
+                    <input
+                      onChange={event =>
+                        this.setState({ user: event.target.value }, () =>
+                          console.log(this.state.user)
+                        )
+                      }
+                      value={this.state.user}
+                      type="text"
+                      placeholder="name"
+                      style={styleInput}
+                    />
+                    <button type="submit">Go</button>
+                  </form>
+                </li>
+                <li>LogIn</li>
+              </>
+            )}
 
             {/*
             <li onClick={this.toggleModal}>SignUp</li>
@@ -51,5 +64,11 @@ class NavBar extends Component {
     );
   }
 }
+
+const styleInput = {
+  borderRadius: "25px",
+  marginRight: "5px",
+  textAlign: "center"
+};
 
 export default NavBar;
