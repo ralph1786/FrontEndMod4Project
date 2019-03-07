@@ -49,13 +49,15 @@ export default class TeamsContainer extends React.Component {
     .then(theUser => this.setState({
       theUser
     }, ()=> console.log("state user:", this.state.theUser)))
+    .then(theUser => this.props.setUser(theUser))
 
   }
 
   logOut = () => {
     this.setState({
       theUser: {}
-    })
+    });
+    this.props.setUser({});
   }
 
   render() {

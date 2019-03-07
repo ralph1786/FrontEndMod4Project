@@ -52,7 +52,7 @@ class NavBar extends Component {
                 placeholder="name"/>
                 <button type="submit">Go</button>
                 </form></li>
-              <li onClick={this.toggleModal}>LogIn</li></>}
+              <li>LogIn</li></>}
 
             {/*
             <li onClick={this.toggleModal}>SignUp</li>
