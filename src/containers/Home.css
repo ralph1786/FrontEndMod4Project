@@ -36,8 +36,8 @@ body {
 
 .logo-container img {
   grid-column: 2/6;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 10px;
   border-radius: 45%;
   opacity: 0.5;
