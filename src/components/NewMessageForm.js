@@ -31,7 +31,6 @@ const NewMessageForm = props => {
     <div>
       <form onSubmit={event => props.onSubmitHandler(event)}>
         {/* <label for="text">For {props.activeTeam.name}</label> */}
-        <br />
         <textarea
           style={stylesTextArea}
           onChange={event => props.onChangeHandler(event)}

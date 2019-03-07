@@ -75,14 +75,17 @@ class ChatRoom extends Component {
 }
 
 const styles = {
-  marginLeft: "45%",
-  marginTop: "30px",
+  position: "fixed",
+  marginLeft: "52%",
+  marginTop: "10px",
   width: "100px",
   height: "100px"
 };
 
 const stylesName = {
-  marginLeft: "43%"
+  position: "fixed",
+  marginLeft: "52%",
+  marginTop: "120px"
 };
 
 export default ChatRoom;

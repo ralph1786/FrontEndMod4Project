@@ -19,7 +19,6 @@ class MessagesContainer extends Component {
 
   onSubmitHandler = event => {
     event.preventDefault();
-
     const obj = {
       text: this.state.text,
       team_id: this.props.activeTeam.id,
