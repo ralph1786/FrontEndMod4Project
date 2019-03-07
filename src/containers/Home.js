@@ -6,6 +6,17 @@ import ChatRoom from "./ChatRoom";
 import TeamsContainer from "./TeamsContainer";
 
 class Home extends Component {
+
+  state={
+    theUser: null
+  }
+
+  setUser = (theUser) => {
+    this.setState({
+      theUser
+    })
+  }
+
   render() {
     return (
       <Fragment>
@@ -14,10 +25,10 @@ class Home extends Component {
             path="/chatroom/:id"
             render={routerProps => {
               let id = routerProps.match.params.id;
-              return <ChatRoom id={id} />;
+              return <ChatRoom theUser={this.state.theUser} id={id} />;
             }}
           />
-          <Route path="/" component={TeamsContainer} />
+          <Route path="/" render={(props) => <TeamsContainer setUser={this.setUser}/> } />
         </Switch>
       </Fragment>
     );

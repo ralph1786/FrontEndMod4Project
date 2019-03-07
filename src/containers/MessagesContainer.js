@@ -30,11 +30,7 @@ class MessagesContainer extends Component {
     fetch("http://localhost:3000/messages", {
       method: "POST",
       headers: HEADERS,
-      body: JSON.stringify({
-        text: this.state.text,
-        team_id: this.props.activeTeam.id,
-        user_id: 1
-      })
+      body: JSON.stringify(obj)
     })
       .then(res => res.json())
       .then(
@@ -49,15 +45,13 @@ class MessagesContainer extends Component {
   };
 
   render() {
+    console.log(this.props.theUser)
     const messages = this.props.activeTeam.messages.map(message => (
       <Message info={message} key={message.id} />
     ));
     return (
       <div>
-        <h3>{messages}</h3>
-        <br />
-        <br />
-        <br />
+        <h3>{messages}</h3><br/><br/><br/>
         <NewMessageForm
           activeTeam={this.props.activeTeam}
           onChangeHandler={this.onChangeHandler}

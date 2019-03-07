@@ -14,7 +14,7 @@ const stylesTextArea = {
 
 const stylesButton = {
   position: "fixed",
-  right: "42%",
+  right: "42.5%",
   bottom: "20px",
   width: "7%",
   height: "7%",

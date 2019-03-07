@@ -9,7 +9,8 @@ import "./ChatRoom.css";
 
 class ChatRoom extends Component {
   state = {
-    team: {}
+    team: {},
+    theUser: this.props.theUser
   };
 
   componentDidMount() {
@@ -58,7 +59,7 @@ class ChatRoom extends Component {
                   alt="team-logo"
                 />
                 <h3 style={stylesName}>{this.state.team.name}</h3>
-                <MessagesContainer activeTeam={this.state.team} />
+                <MessagesContainer activeTeam={this.state.team} theUser={this.props.theUser} />
               </>
             ) : (
               <h2>Select a team.</h2>

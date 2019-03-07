@@ -1,5 +1,5 @@
 import React from "react";
-import { API_ROOT } from "../constants";
+import { API_ROOT, HEADERS } from "../constants";
 // import Cable from "./Cable";
 import { Link } from "react-router-dom";
 // import TeamLogo from "../components/TeamLogo";
@@ -10,7 +10,8 @@ import video from "../Assets/Video/basketball.mp4";
 export default class TeamsContainer extends React.Component {
   state = {
     teams: [],
-    activeTeam: ""
+    activeTeam: "",
+    theUser: {}
   };
 
   componentDidMount() {
@@ -36,9 +37,33 @@ export default class TeamsContainer extends React.Component {
     this.setState({ teams }, () => console.log("new teams", this.state.teams));
   };
 
+  submitUser = (user) => {
+    console.log("USER: ", user)
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: HEADERS,
+      body: JSON.stringify({
+        username: user
+      })
+    })
+    .then(res => res.json())
+    .then(theUser => this.setState({
+      theUser
+    }, ()=> console.log("state user:", this.state.theUser)))
+    .then(theUser => this.props.setUser(theUser))
+
+  }
+
+  logOut = () => {
+    this.setState({
+      theUser: {}
+    });
+    this.props.setUser({});
+  }
+
   render() {
     const teamLogos = this.state.teams.map(team => (
-      <Link to={`/chatroom/${team.id}`}>
+      <Link key={team.id} to={`/chatroom/${team.id}`}>
         <img
           alt="nba-team-logo"
           key={team.id}
@@ -64,7 +89,7 @@ export default class TeamsContainer extends React.Component {
             <i className="fas fa-basketball-ball" /> FanChat
           </span>
           <div className="top-navbar">
-            <NavBar />
+            <NavBar submitUser={this.submitUser} theUser={this.state.theUser} logOut={this.logOut}/>
           </div>
           <div className="logo-container">{teamLogos}</div>
           <div className="header-content">
