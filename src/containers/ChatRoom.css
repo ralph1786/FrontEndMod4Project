@@ -65,11 +65,17 @@
   border: 1px solid black;
   grid-column: 1/8;
   grid-row: 1/13;
+  overflow: scroll;
 }
 
-.inputBox {
+.messageContainer button:hover {
+  cursor: pointer;
+  background-color: rgb(5, 76, 151);
+}
+
+/* .inputBox {
   background-color: lightpink;
   border: 1px solid black;
   grid-column: 3/8;
   grid-row: 10/12;
-}
+} */

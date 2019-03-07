@@ -52,7 +52,12 @@ class ChatRoom extends Component {
                   team={this.state.team}
                   handleReceivedMessage={this.handleReceivedMessage}
                 />
-                <h2 style={styles}>Team: {this.state.team.name}</h2>
+                <img
+                  src={this.state.team.logo}
+                  style={styles}
+                  alt="team-logo"
+                />
+                <h3 style={stylesName}>{this.state.team.name}</h3>
                 <MessagesContainer activeTeam={this.state.team} />
               </>
             ) : (
@@ -69,7 +74,14 @@ class ChatRoom extends Component {
 }
 
 const styles = {
-  textAlign: "center"
+  marginLeft: "45%",
+  marginTop: "30px",
+  width: "100px",
+  height: "100px"
+};
+
+const stylesName = {
+  marginLeft: "43%"
 };
 
 export default ChatRoom;
