@@ -16,3 +16,13 @@
   color: rgb(216, 214, 214);
   cursor: pointer;
 }
+
+.go-btn {
+  border-radius: 25%;
+}
+
+.go-btn:hover {
+  cursor: pointer;
+  color: white;
+  background: rgb(221, 105, 11);
+}

@@ -47,8 +47,11 @@ class NavBar extends Component {
                       type="text"
                       placeholder="name"
                       style={styleInput}
+                      className="input-bar"
                     />
-                    <button type="submit">Go</button>
+                    <button type="submit" className="go-btn">
+                      Go
+                    </button>
                   </form>
                 </li>
                 <li>LogIn</li>
@@ -68,7 +71,8 @@ class NavBar extends Component {
 const styleInput = {
   borderRadius: "25px",
   marginRight: "5px",
-  textAlign: "center"
+  textAlign: "center",
+  display: "inline-block"
 };
 
 export default NavBar;

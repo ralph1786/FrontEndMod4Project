@@ -36,8 +36,8 @@ body {
 
 .logo-container img {
   grid-column: 2/6;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   margin: 10px;
   border-radius: 45%;
   opacity: 0.5;
@@ -147,9 +147,27 @@ body {
   outline: none;
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .container {
     padding-right: 3rem;
     padding-left: 3rem;
+  }
+} */
+
+@media (min-width: 1440px) {
+  .logo-container img {
+    grid-column: 2/6;
+    width: 95px;
+    height: 95px;
+    margin: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .log-container img {
+    grid-column: 2/6;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
   }
 }
