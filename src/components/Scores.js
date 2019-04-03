@@ -8,11 +8,15 @@ const Scores = props => {
     <div className="Scores">
       <p>
         {vTeam.triCode}
-        <span>{vTeam.score}</span>
+        <span className={vTeam.score > hTeam.score ? "winningTeam" : null}>
+          {vTeam.score}
+        </span>
       </p>
       <p>
         {hTeam.triCode}
-        <span>{hTeam.score}</span>
+        <span className={hTeam.score > vTeam.score ? "winningTeam" : null}>
+          {hTeam.score}
+        </span>
       </p>
       <h5>{clock ? clock : startTimeEastern}</h5>
     </div>
