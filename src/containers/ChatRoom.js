@@ -59,7 +59,10 @@ class ChatRoom extends Component {
                   alt="team-logo"
                 />
                 <h3 style={stylesName}>{this.state.team.name}</h3>
-                <MessagesContainer activeTeam={this.state.team} theUser={this.props.theUser} />
+                <MessagesContainer
+                  activeTeam={this.state.team}
+                  theUser={this.state.theUser}
+                />
               </>
             ) : (
               <h2>Select a team.</h2>
@@ -76,7 +79,7 @@ class ChatRoom extends Component {
 
 const styles = {
   position: "fixed",
-  marginLeft: "52%",
+  marginLeft: "47%",
   marginTop: "10px",
   width: "100px",
   height: "100px"
@@ -84,7 +87,7 @@ const styles = {
 
 const stylesName = {
   position: "fixed",
-  marginLeft: "52%",
+  marginLeft: "46%",
   marginTop: "120px"
 };
 

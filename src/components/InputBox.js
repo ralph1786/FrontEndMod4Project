@@ -10,7 +10,7 @@ const textarea = {
 const InputBox = () => {
   return (
     <div>
-      <textarea type="text" placeholder="type here!" style={textarea} />
+      <textarea type="text" placeholder="Type here!" style={textarea} />
       <button>Send</button>
     </div>
   );
