@@ -1,0 +1,20 @@
+.News {
+  webkit-box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
+  moz-box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
+  box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
+  margin: 10px;
+  background-color: #faf8f5;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.3em;
+}
+
+.News:hover {
+  background-color: rgb(230, 228, 228);
+  transition: all 0.3s ease-in;
+}
+
+.News a {
+  color: black;
+  text-decoration: none;
+}
