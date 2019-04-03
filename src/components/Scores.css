@@ -1,0 +1,28 @@
+.Scores {
+  width: 130px;
+  height: 125px;
+  margin: 5px;
+  display: inline-block;
+  webkit-box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
+  moz-box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
+  box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
+  background-color: #cf5300;
+  border-radius: 50%;
+}
+
+.Scores p {
+  margin: 15px;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.Scores span {
+  margin-left: 11px;
+  font-size: 1.3rem;
+}
+
+.Scores h5 {
+  margin-top: -10px;
+  margin-left: 30px;
+  color: black;
+}
