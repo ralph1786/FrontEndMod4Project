@@ -1,0 +1,28 @@
+.Score-headline {
+  text-align: center;
+  color: white;
+  font-family: Impact;
+  font-size: 2.3em;
+}
+
+.prev-button {
+  position: absolute;
+  top: 5%;
+  margin-left: 5%;
+}
+
+.prev-button:hover {
+  cursor: pointer;
+  color: rgb(95, 93, 93);
+}
+
+.next-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.next-button:hover {
+  cursor: pointer;
+  color: rgb(95, 93, 93);
+}
