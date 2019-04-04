@@ -10,8 +10,13 @@
   border-radius: 50%;
 }
 
+.Scores:hover {
+  cursor: pointer;
+}
+
 .Scores p {
   margin: 15px;
+  padding-left: 10px;
   font-size: 1.3rem;
   color: white;
 }
@@ -24,6 +29,7 @@
 .Scores h5 {
   margin-top: -10px;
   margin-left: 30px;
+  padding-left: 3px;
   color: black;
 }
 

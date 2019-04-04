@@ -2,10 +2,20 @@ import React from "react";
 import "./Scores.css";
 
 const Scores = props => {
-  // console.log(props.info);
-  const { hTeam, vTeam, clock, startTimeEastern } = props.info;
+  // console.log(props);
+  const {
+    hTeam,
+    vTeam,
+    clock,
+    startTimeEastern,
+    endTimeUTC,
+    period
+  } = props.info;
   return (
-    <div className="Scores">
+    <div
+      className="Scores"
+      onClick={() => props.selectedGameHandler(props.info)}
+    >
       <p>
         {vTeam.triCode}
         <span className={vTeam.score > hTeam.score ? "winningTeam" : null}>
@@ -18,7 +28,13 @@ const Scores = props => {
           {hTeam.score}
         </span>
       </p>
-      <h5>{clock ? clock : startTimeEastern}</h5>
+      {clock ? (
+        <h5>
+          {clock} / Qrt-{period.current}
+        </h5>
+      ) : (
+        <h5>{endTimeUTC ? "Final" : startTimeEastern}</h5>
+      )}
     </div>
   );
 };
