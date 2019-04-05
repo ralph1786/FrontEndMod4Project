@@ -18,13 +18,21 @@ const Scores = props => {
     >
       <p>
         {vTeam.triCode}
-        <span className={vTeam.score > hTeam.score ? "winningTeam" : null}>
+        <span
+          className={
+            parseInt(vTeam.score) > parseInt(hTeam.score) ? "winningTeam" : null
+          }
+        >
           {vTeam.score}
         </span>
       </p>
       <p>
         {hTeam.triCode}
-        <span className={hTeam.score > vTeam.score ? "winningTeam" : null}>
+        <span
+          className={
+            parseInt(hTeam.score) > parseInt(vTeam.score) ? "winningTeam" : null
+          }
+        >
           {hTeam.score}
         </span>
       </p>
