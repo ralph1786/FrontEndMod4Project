@@ -3,6 +3,8 @@ import Scores from "../components/Scores";
 import Modal from "react-modal";
 import axios from "axios";
 import moment from "moment";
+import { css } from "@emotion/core";
+import { FadeLoader } from "react-spinners";
 import "./ScoreContainer.css";
 import ModalContent from "../components/ModalContent";
 
@@ -11,7 +13,8 @@ class ScoreContainer extends Component {
     leagueScores: [],
     count: 0,
     selectedGame: {},
-    showModal: false
+    showModal: false,
+    loading: false
   };
 
   fetchData = () => {
@@ -24,7 +27,8 @@ class ScoreContainer extends Component {
       .then(res => {
         let games = res.data.games;
         this.setState({
-          leagueScores: games
+          leagueScores: games,
+          loading: false
         });
       });
   };
@@ -36,13 +40,14 @@ class ScoreContainer extends Component {
 
   previousDay = () => {
     this.setState(prevState => {
-      return { count: prevState.count + 1 };
+      return { count: prevState.count + 1, loading: true };
     });
   };
 
   nextDay = () => {
     this.setState({
-      count: this.state.count - 1
+      count: this.state.count - 1,
+      loading: true
     });
   };
 
@@ -87,6 +92,13 @@ class ScoreContainer extends Component {
               <i className="fas fa-angle-double-right fa-2x" />
             </span>
           ) : null}
+          <FadeLoader
+            css={override}
+            sizeUnit={"px"}
+            size={150}
+            color={"red"}
+            loading={this.state.loading}
+          />
           {gameScores}
         </div>
         <div>
@@ -102,6 +114,12 @@ class ScoreContainer extends Component {
     );
   }
 }
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const customStyles = {
   content: {
