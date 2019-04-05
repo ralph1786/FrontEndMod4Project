@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NewsContainer from "./NewsContainer";
-// import InputBox from "../components/InputBox";
 import MessagesContainer from "./MessagesContainer";
 import ScoreContainer from "./ScoreContainer";
 import { API_ROOT } from "../constants";
@@ -44,8 +43,14 @@ class ChatRoom extends Component {
         <div className="scores">
           <ScoreContainer />
         </div>
-        <div className="messageContainer">
-          {/* <MessagesContainer /> */}
+        <div
+          style={{
+            backgroundImage: `url(${this.state.team.logo})`,
+            backgroundSize: "cover"
+          }}
+          className="messageContainer"
+        >
+          <div className="overlay" />
           <div>
             {this.state.team.name ? (
               <>
@@ -53,12 +58,12 @@ class ChatRoom extends Component {
                   team={this.state.team}
                   handleReceivedMessage={this.handleReceivedMessage}
                 />
-                <img
+                {/* <img
                   src={this.state.team.logo}
                   style={styles}
                   alt="team-logo"
-                />
-                <h3 style={stylesName}>{this.state.team.name}</h3>
+                /> */}
+                {/* <h3 style={stylesName}>{this.state.team.name}</h3> */}
                 <MessagesContainer
                   activeTeam={this.state.team}
                   theUser={this.state.theUser}
@@ -77,18 +82,18 @@ class ChatRoom extends Component {
   }
 }
 
-const styles = {
-  position: "fixed",
-  marginLeft: "47%",
-  marginTop: "10px",
-  width: "100px",
-  height: "100px"
-};
+// const styles = {
+//   position: "fixed",
+//   marginLeft: "47%",
+//   marginTop: "10px",
+//   width: "100px",
+//   height: "100px"
+// };
 
-const stylesName = {
-  position: "fixed",
-  marginLeft: "46%",
-  marginTop: "120px"
-};
+// const stylesName = {
+//   position: "fixed",
+//   marginLeft: "46%",
+//   marginTop: "120px"
+// };
 
 export default ChatRoom;

@@ -50,17 +50,17 @@
 
 .messageContainer {
   position: relative;
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  /* background: #ece9e6; fallback for old browsers */
+  /* background: -webkit-linear-gradient(
     to right,
     #ffffff,
     #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
+  ); Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(
     to right,
     #ffffff,
     #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); */
 
   border: 1px solid black;
   grid-column: 1/8;
@@ -70,7 +70,17 @@
 
 .messageContainer button:hover {
   cursor: pointer;
-  background-color: rgb(5, 76, 151);
+  background-color: rgb(61, 128, 200);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(228, 226, 226, 0.87);
+  z-index: 0;
 }
 
 /* .inputBox {
