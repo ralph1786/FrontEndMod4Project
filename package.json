@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.10",
     "axios": "^0.18.0",
     "moment": "^2.24.0",
     "react": "^16.8.3",
@@ -11,7 +12,8 @@
     "react-dom": "^16.8.3",
     "react-modal": "^3.8.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-spinners": "^0.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
