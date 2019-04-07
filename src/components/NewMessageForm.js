@@ -1,6 +1,6 @@
 import React from "react";
 
-const stylesTextArea = {
+const stylesInput = {
   position: "fixed",
   bottom: "20px",
   width: "48%",
@@ -31,12 +31,12 @@ const NewMessageForm = props => {
     <div>
       <form onSubmit={event => props.onSubmitHandler(event)}>
         {/* <label for="text">For {props.activeTeam.name}</label> */}
-        <textarea
-          style={stylesTextArea}
+        <input
+          style={stylesInput}
           onChange={event => props.onChangeHandler(event)}
           value={props.value}
           name="text"
-          type="textarea"
+          type="text"
           placeholder="Enter Message Here!"
         />
         <button style={stylesButton}>
