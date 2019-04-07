@@ -32,7 +32,7 @@ class MessagesContainer extends Component {
       headers: HEADERS,
       body: JSON.stringify(obj)
     })
-      .then(res => res.json())
+      // .then(res => res.json())
       .then(
         this.setState({
           text: ""
@@ -45,13 +45,16 @@ class MessagesContainer extends Component {
   };
 
   render() {
-    console.log(this.props.theUser)
+    console.log(this.props);
     const messages = this.props.activeTeam.messages.map(message => (
       <Message info={message} key={message.id} />
     ));
     return (
       <div>
-        <h3>{messages}</h3><br/><br/><br/>
+        <h3>{messages}</h3>
+        <br />
+        <br />
+        <br />
         <NewMessageForm
           activeTeam={this.props.activeTeam}
           onChangeHandler={this.onChangeHandler}
