@@ -5,16 +5,21 @@
 } */
 
 .container-messages {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
+  border: 1px solid #dedede;
+  background-color: #f5981f;
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
+  margin: 20px 1px;
   /* margin: 0 auto; */
   max-width: 500px;
   max-height: auto;
   padding: 20px;
   font-family: "Times New Roman", Times, serif;
+  opacity: 0.99;
+}
+
+.container-messages:nth-child(odd) {
+  margin-left: 50%;
 }
 
 .container-messages::after {
@@ -31,18 +36,13 @@
   border-radius: 50%;
 }
 
-/* .container img.right {
-  float: right;
-  margin-left: 20px;
-  margin-right: 0;
-} */
-
 .time-right {
   float: right;
-  color: #aaa;
+  /* color: rgb(95, 93, 93); */
+  color: white;
 }
 
-.time-left {
+/* .time-left {
   float: left;
   color: #999;
-}
+} */

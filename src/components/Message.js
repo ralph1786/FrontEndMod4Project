@@ -1,7 +1,9 @@
 import React from "react";
 import "./Messages.css";
+import moment from "moment";
 
 const Message = props => {
+  const time = moment(props.info.created_at).format("h:mm");
   return (
     <div className="container-messages">
       <img
@@ -9,7 +11,7 @@ const Message = props => {
         alt="Avatar"
       />
       <p>{props.info.text}</p>
-      <span className="time-right">11:00</span>
+      <span className="time-right">{time}</span>
     </div>
   );
 };
