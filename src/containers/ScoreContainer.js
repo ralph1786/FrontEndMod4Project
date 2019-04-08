@@ -99,7 +99,11 @@ class ScoreContainer extends Component {
             color={"red"}
             loading={this.state.loading}
           />
-          {gameScores}
+          {gameScores.length > 0 ? (
+            gameScores
+          ) : (
+            <h2>No Games Scheduled For Today!</h2>
+          )}
         </div>
         <div>
           <Modal
