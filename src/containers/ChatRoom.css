@@ -74,13 +74,15 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background-color: rgba(228, 226, 226, 0.87);
   z-index: 0;
+  width: 58.5%;
+  overflow: scroll;
 }
 
 /* .inputBox {
