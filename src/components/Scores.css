@@ -12,6 +12,8 @@
 
 .Scores:hover {
   cursor: pointer;
+  background-color: #dd722b;
+  transition: all 0.4s ease-out;
 }
 
 .Scores p {
