@@ -9,20 +9,26 @@
   position: absolute;
   top: 5%;
   margin-left: 5%;
+  color: black;
 }
 
 .prev-button:hover {
   cursor: pointer;
-  color: rgb(95, 93, 93);
+  color: rgb(80, 78, 78);
+  transform: scale(1.2);
+  transition: all 0.4s ease-in;
 }
 
 .next-button {
   position: absolute;
   top: 5%;
   right: 5%;
+  color: black;
 }
 
 .next-button:hover {
   cursor: pointer;
-  color: rgb(95, 93, 93);
+  color: rgb(80, 78, 78);
+  transform: scale(1.2);
+  transition: all 0.4s ease-in;
 }
