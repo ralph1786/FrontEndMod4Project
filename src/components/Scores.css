@@ -3,15 +3,13 @@
   height: 125px;
   margin: 5px;
   display: inline-block;
-  webkit-box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
-  moz-box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
-  box-shadow: 10px 10px 5px -5px rgba(181, 174, 181, 1);
   background-color: #cf5300;
   border-radius: 50%;
 }
 
 .Scores:hover {
   cursor: pointer;
+  transform: scale(1.05);
   background-color: #dd722b;
   transition: all 0.4s ease-out;
 }
