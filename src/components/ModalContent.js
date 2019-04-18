@@ -31,7 +31,9 @@ const ModalContent = props => {
       )}
       <p
         className={
-          vTeam.score > hTeam.score ? "visit-team winning-team" : "visit-team"
+          parseInt(vTeam.score) > parseInt(hTeam.score)
+            ? "visit-team winning-team"
+            : "visit-team"
         }
       >
         {vTeam.triCode}
@@ -41,7 +43,7 @@ const ModalContent = props => {
       </h5>
       <span
         className={
-          vTeam.score > hTeam.score
+          parseInt(vTeam.score) > parseInt(hTeam.score)
             ? "visit-team-score winning-team"
             : "visit-team-score"
         }
@@ -50,7 +52,9 @@ const ModalContent = props => {
       </span>
       <p
         className={
-          hTeam.score > vTeam.score ? "home-team winning-team" : "home-team"
+          parseInt(hTeam.score) > parseInt(vTeam.score)
+            ? "home-team winning-team"
+            : "home-team"
         }
       >
         {hTeam.triCode}
@@ -60,7 +64,7 @@ const ModalContent = props => {
       </h5>
       <span
         className={
-          hTeam.score > vTeam.score
+          parseInt(hTeam.score) > parseInt(vTeam.score)
             ? "home-team-score winning-team"
             : "home-team-score"
         }
