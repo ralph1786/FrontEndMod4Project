@@ -96,7 +96,7 @@ class ScoreContainer extends Component {
             css={override}
             sizeUnit={"px"}
             size={150}
-            color={"red"}
+            color={"white"}
             loading={this.state.loading}
           />
           {gameScores.length > 0 ? (
