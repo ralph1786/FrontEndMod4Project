@@ -3,7 +3,7 @@ import { API_ROOT, HEADERS } from "../constants";
 // import Cable from "./Cable";
 import { Link } from "react-router-dom";
 // import TeamLogo from "../components/TeamLogo";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 import video from "../Assets/Video/basketball.mp4";
 // import video from "../Assets/Video/highlight.mov";
 
@@ -37,8 +37,8 @@ export default class TeamsContainer extends React.Component {
     this.setState({ teams }, () => console.log("new teams", this.state.teams));
   };
 
-  submitUser = (user) => {
-    console.log("USER: ", user)
+  submitUser = user => {
+    console.log("USER: ", user);
     fetch("http://localhost:3000/users", {
       method: "POST",
       headers: HEADERS,
@@ -46,20 +46,24 @@ export default class TeamsContainer extends React.Component {
         username: user
       })
     })
-    .then(res => res.json())
-    .then(theUser => this.setState({
-      theUser
-    }, ()=> console.log("state user:", this.state.theUser)))
-    .then(theUser => this.props.setUser(theUser))
-
-  }
+      .then(res => res.json())
+      .then(theUser =>
+        this.setState(
+          {
+            theUser
+          },
+          () => console.log("state user:", this.state.theUser)
+        )
+      )
+      .then(theUser => this.props.setUser(theUser));
+  };
 
   logOut = () => {
     this.setState({
       theUser: {}
     });
     this.props.setUser({});
-  }
+  };
 
   render() {
     const teamLogos = this.state.teams.map(team => (
@@ -88,9 +92,9 @@ export default class TeamsContainer extends React.Component {
           <span>
             <i className="fas fa-basketball-ball" /> FanChat
           </span>
-          <div className="top-navbar">
+          {/* <div className="top-navbar">
             <NavBar submitUser={this.submitUser} theUser={this.state.theUser} logOut={this.logOut}/>
-          </div>
+          </div> */}
           <div className="logo-container">{teamLogos}</div>
           <div className="header-content">
             <p> Welcome NBA fans! </p>
