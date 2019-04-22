@@ -1,0 +1,68 @@
+.input-style {
+  position: fixed;
+  bottom: 20px;
+  width: 48%;
+  height: 7%;
+  font-size: 1.4em;
+  border-radius: 25px;
+  outline: none;
+  margin-left: 23px;
+  text-align: center;
+}
+
+.button-style {
+  position: fixed;
+  right: 41.5%;
+  bottom: 20px;
+  width: 7%;
+  height: 7%;
+  font-size: 1.4em;
+  background-color: #007aff;
+  color: white;
+  border-radius: 50px;
+  margin-right: 23px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .input-style {
+    height: 4%;
+  }
+  .button-style {
+    height: 4%;
+    right: 38%;
+    width: 6%;
+  }
+  .button-style .fas {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 414px) {
+  .input-style {
+    height: 3%;
+    font-size: 1.1em;
+    width: 44%;
+    margin-left: 10px;
+  }
+
+  .button-style {
+    height: 3.3%;
+  }
+
+  .button-style .fas {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 375px) {
+  .input-style {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .button-style {
+    right: 40%;
+  }
+}
