@@ -33,11 +33,11 @@ class MessagesContainer extends Component {
       body: JSON.stringify(obj)
     })
       // .then(res => res.json())
-      .then(
+      .then(() => {
         this.setState({
           text: ""
-        })
-      );
+        });
+      });
 
     // axios.post("http://localhost:3000/" + 'messages', obj)
     // .then(res => console.log(res.data))
@@ -51,10 +51,7 @@ class MessagesContainer extends Component {
     ));
     return (
       <div>
-        <h3>{messages}</h3>
-        <br />
-        <br />
-        <br />
+        <div style={{ marginBottom: "30%" }}>{messages}</div>
         <NewMessageForm
           activeTeam={this.props.activeTeam}
           onChangeHandler={this.onChangeHandler}
