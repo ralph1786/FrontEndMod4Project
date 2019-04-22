@@ -36,3 +36,31 @@
 h2 {
   text-align: center;
 }
+
+@media (max-width: 414px) {
+  .Score-headline {
+    font-size: 1.6em;
+  }
+
+  .prev-button .fas {
+    font-size: 1.2em;
+  }
+
+  .next-button .fas {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 375px) {
+  .Score-headline {
+    font-size: 1.2em;
+  }
+
+  .prev-button .fas {
+    font-size: 1em;
+  }
+
+  .next-button .fas {
+    font-size: 1em;
+  }
+}
