@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import News from "../components/News";
+import "./NewsContainer.css";
 import axios from "axios";
 
 const url =
@@ -28,18 +29,11 @@ class NewsContainer extends Component {
 
     return (
       <div>
-        <h2 style={styles}>Headlines</h2>
+        <h2 className="news-headline">Headlines</h2>
         {articles}
       </div>
     );
   }
 }
-
-const styles = {
-  textAlign: "center",
-  color: "white",
-  fontFamily: "Impact",
-  fontSize: "2.3em"
-};
 
 export default NewsContainer;
