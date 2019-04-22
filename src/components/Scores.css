@@ -36,3 +36,52 @@
 .winningTeam {
   color: rgb(21, 231, 21);
 }
+
+@media (max-width: 414px) {
+  .Scores {
+    width: 100px;
+    height: 95px;
+  }
+
+  .Scores p {
+    margin: 9px;
+    padding-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .Scores span {
+    margin-left: 11px;
+    font-size: 0.75rem;
+  }
+
+  .Scores h5 {
+    margin-top: 8px;
+    margin-left: 20px;
+    padding-left: 2px;
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 375px) {
+  .Scores {
+    width: 85px;
+    height: 80px;
+  }
+  .Scores p {
+    margin: 9px;
+    padding-left: 10px;
+    font-size: 0.7rem;
+  }
+
+  .Scores span {
+    margin-left: 11px;
+    font-size: 0.5rem;
+  }
+
+  .Scores h5 {
+    margin-top: 8px;
+    margin-left: 20px;
+    padding-left: 2px;
+    font-size: 0.5em;
+  }
+}
