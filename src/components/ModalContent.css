@@ -104,3 +104,65 @@
   color: rgb(243, 36, 36);
   font-weight: 900;
 }
+
+@media (max-width: 768px) {
+  .game-modal {
+    width: 650px;
+    height: 400px;
+  }
+
+  .game-modal img {
+    height: 40vh;
+  }
+
+  .game-modal h1 {
+    margin-top: -5px;
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 414px) {
+  .game-modal {
+    width: 375px;
+    height: 300px;
+  }
+
+  .game-modal img {
+    height: 40vh;
+  }
+
+  .game-modal h1 {
+    margin-top: -5px;
+    font-size: 1.1em;
+  }
+
+  .game-modal h4 {
+    font-size: 0.7em;
+  }
+
+  .game-modal .visit-team,
+  .game-modal .home-team {
+    font-size: 0.9em;
+  }
+
+  .game-modal .visit-team-score,
+  .game-modal .home-team-score {
+    font-size: 0.9em;
+  }
+
+  .game-modal .visit-team-record,
+  .game-modal .home-team-record {
+    font-size: 0.7em;
+  }
+  .game-modal .home-team-record {
+    margin-top: 20px;
+  }
+
+  .game-modal span:last-of-type {
+    font-size: 0.9em;
+  }
+
+  .game-modal a {
+    font-size: 0.8em;
+  }
+}
