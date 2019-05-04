@@ -4,7 +4,7 @@ Application for NBA fans where they are able to access different chat-rooms depe
 
 ## Getting Started
 
-To get the application up and running you must clone this project, which is the frontend of the application you must also clone its corresponding backend that has the name of aberm/basketball-fanchat-backend. Once you have cloned both repositories go into your backend, and in the terminal run **rails s** to start the rails server. For the frontend open it on your favorite browser by running the **npm start** command on your terminal.
+To get the application up and running you must clone this project, which is the frontend of the application you must also clone its corresponding backend that has the name of aberm/basketball-fanchat-backend. Once you have cloned both repositories go into your backend, and in the terminal run **rails s** to start the rails server. For the frontend first we must install all the necessary dependencies by running **npm install** on your terminal. Then open it on your favorite browser by running the **npm start** command on the terminal.
 
 ### Prerequisites
 
@@ -14,7 +14,13 @@ Install latest version Node.js
 
 ## Built With
 
-* create-react-app, React framework for creating user interface
+* create-react-app -> React framework for creating user interface
+* axios -> library for making http requests.
+* moment -> Date formatting.
+* react-modal -> provides modal component
+* react-router-dom -> provides routing to single page applications
+* react-spinner -> provides a spinner component
+* custom css
 
 ### Dependencies
     The following dependencies are in addition to the ones create-react-app comes with.
